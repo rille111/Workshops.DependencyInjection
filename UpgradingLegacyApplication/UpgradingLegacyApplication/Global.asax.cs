@@ -1,15 +1,14 @@
 ﻿using System.Linq;
 using System.Web.Http;
-using System.Web.Routing;
 
-namespace UpgradingLegacyApplication
+namespace UpgradingLegacyApplication.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
-            RemoveXmlFormatter(GlobalConfiguration.Configuration);
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            RemoveXmlFormatter(GlobalConfiguration.Configuration);
         }
 
         private void RemoveXmlFormatter(HttpConfiguration config)

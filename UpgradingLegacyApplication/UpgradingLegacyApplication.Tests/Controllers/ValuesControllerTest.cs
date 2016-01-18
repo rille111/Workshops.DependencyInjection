@@ -6,7 +6,7 @@ using System.Text;
 using System.Web.Http;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UpgradingLegacyApplication;
-using UpgradingLegacyApplication.Controllers;
+using UpgradingLegacyApplication.Api.Controllers;
 
 namespace UpgradingLegacyApplication.Tests.Controllers
 {
@@ -17,10 +17,10 @@ namespace UpgradingLegacyApplication.Tests.Controllers
         public void Get()
         {
             // Arrange
-            CustomersController controller = new CustomersController();
+            var controller = new CustomersController();
 
             // Act
-            IEnumerable<string> result = controller.Get();
+            var result = controller.Get();
 
             // Assert
             Assert.IsNotNull(result);
@@ -35,7 +35,7 @@ namespace UpgradingLegacyApplication.Tests.Controllers
             var controller = new CustomersController();
 
             // Act
-            string result = controller.Get(5);
+            var result = controller.Get(5);
 
             // Assert
             Assert.AreEqual("value", result);

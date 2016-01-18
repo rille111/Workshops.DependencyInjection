@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
-namespace UpgradingLegacyApplication
+namespace UpgradingLegacyApplication.Api
 {
     public static class WebApiConfig
     {
@@ -14,11 +11,12 @@ namespace UpgradingLegacyApplication
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            //config.Routes.MapHttpRoute(
+            //            name: "DefaultApi",
+            //            routeTemplate: "bla/{controller}/{id}",
+            //            defaults: new { id = RouteParameter.Optional }
+            //        );
         }
     }
 }
+
