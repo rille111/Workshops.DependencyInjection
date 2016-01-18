@@ -102,9 +102,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UpgradingLegacyApplication\UpgradingLegacyApplication.csproj">
+    <ProjectReference Include="..\UpgradingLegacyApplication\UpgradingLegacyApplication.Api.csproj">
       <Project>{B213EC16-C441-41F8-AC38-7D0D751837C4}</Project>
-      <Name>UpgradingLegacyApplication</Name>
+      <Name>UpgradingLegacyApplication.Api</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

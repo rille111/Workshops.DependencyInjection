@@ -8,11 +8,11 @@ namespace UpgradingLegacyApplication
     {
         protected void Application_Start()
         {
-            RemoveXmlSerializer(GlobalConfiguration.Configuration);
+            RemoveXmlFormatter(GlobalConfiguration.Configuration);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
 
-        private void RemoveXmlSerializer(HttpConfiguration config)
+        private void RemoveXmlFormatter(HttpConfiguration config)
         {
             var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
