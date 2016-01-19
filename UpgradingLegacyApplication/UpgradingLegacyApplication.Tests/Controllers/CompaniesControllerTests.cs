@@ -14,7 +14,7 @@ namespace UpgradingLegacyApplication.Tests.Controllers
             var controller = new CompanyController();
 
             // Act
-            var result = controller.GetAllCustomers();
+            var result = controller.GetAll();
 
             // Assert
             result.Should().NotBeNull("because we expect at least some results");

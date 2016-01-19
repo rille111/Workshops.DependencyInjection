@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿// ReSharper disable InconsistentNaming
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -9,30 +10,34 @@ namespace UpgradingLegacyApplication.Api.Domain.Services
 {
     public static class JsonCompanyLoader
     {
-        private const string SpecialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
+        private const string _specialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
+        private static readonly ConsoleLogger _logger = new ConsoleLogger();
 
         public static IEnumerable<CompanyModel> LoadCompanies()
         {
-            string json;
+            _logger.Log("LoadCompanies() Was called! From what loader? No idea!");
+            var retrievedJson = string.Empty;
 
-            using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(SpecialDaysResourceName))
+            using (var embeddedStream = Assembly.GetCallingAssembly().GetManifestResourceStream(_specialDaysResourceName))
             {
-                if (stream != null)
-                    using (var reader = new StreamReader(stream))
+                if (embeddedStream != null)
+                    using (var reader = new StreamReader(embeddedStream))
                     {
-                        json = reader.ReadToEnd();
+                        retrievedJson = reader.ReadToEnd();
                     }
                 else
                 {
-                    throw new FileNotFoundException("Companies.json didnt exist or was empty!");
+                    _logger.Log("Companies.json didnt exist or was empty!");
                 }
             }
 
-            return JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);
+            var deserialized = JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(retrievedJson).ToList();
+            return deserialized;
         }
 
         public static CompanyModel LoadCompany(int withId)
         {
+            _logger.Log(string.Format("LoadCompany({0}) Was called! From what loader? No idea!", withId));
             var company = LoadCompanies().SingleOrDefault(p => p.Id == withId);
             return company;
         }
