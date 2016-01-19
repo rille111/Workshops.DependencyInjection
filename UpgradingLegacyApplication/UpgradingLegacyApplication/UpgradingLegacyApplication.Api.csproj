@@ -81,9 +81,9 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Infrastructure\ConsoleLogger.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
-    <Compile Include="CurrentConfiguration.cs" />
+    <Compile Include="Infrastructure\CurrentConfiguration.cs" />
     <Compile Include="Models\CompanyModel.cs" />
     <Compile Include="Domain.Services\JsonCompanyLoader.cs" />
     <Compile Include="Domain.Services\HardCodedCompanyLoader.cs" />

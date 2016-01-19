@@ -6,11 +6,10 @@ namespace UpgradingLegacyApplication.Tests.Domain.Services
     [TestClass]
     public class CompanyLoadersTests
     {
-        [TestMethod, Ignore]
+        [TestMethod]
         public void LegacyJsonCompanyLoader_Should_Load_Companies()
         {
             // Arrange
-
 
             // Act
             JsonCompanyLoader.LoadCompanies();

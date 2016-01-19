@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace UpgradingLegacyApplication.Api
+﻿namespace UpgradingLegacyApplication.Api.Infrastructure
 {
     public class ConsoleLogger
     {

@@ -1,4 +1,5 @@
-﻿// ReSharper disable InconsistentNaming
+﻿using UpgradingLegacyApplication.Api.Infrastructure;
+// ReSharper disable InconsistentNaming
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
