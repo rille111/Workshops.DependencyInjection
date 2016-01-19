@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
 using UpgradingLegacyApplication.Api.Models;
 
-namespace UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder
+namespace UpgradingLegacyApplication.Api.Domain.Services
 {
-    public class LegacyJsonCompanyLoader
+    public static class LegacyJsonCompanyLoader
     {
         public const string SpecialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
 
@@ -25,7 +24,7 @@ namespace UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder
                     }
             }
 
-            return JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);            
+            return JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);
         }
 
         public static CompanyModel LoadCompany(int withId)

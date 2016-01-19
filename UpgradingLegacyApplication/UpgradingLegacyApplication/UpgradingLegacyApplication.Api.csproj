@@ -83,8 +83,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CompanyController.cs" />
     <Compile Include="Models\CompanyModel.cs" />
-    <Compile Include="SomeWeirdLegacyFolder\LegacyJsonCompanyLoader.cs" />
-    <Compile Include="SomeWeirdLegacyFolder\LegacyHardCodedCompanyLoader.cs" />
+    <Compile Include="Domain.Services\LegacyJsonCompanyLoader.cs" />
+    <Compile Include="Domain.Services\LegacyHardCodedCompanyLoader.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

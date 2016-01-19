@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using UpgradingLegacyApplication.Api.Domain.Services;
 using UpgradingLegacyApplication.Api.Models;
-using UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder;
 
 namespace UpgradingLegacyApplication.Api.Controllers
 {

@@ -2,9 +2,9 @@
 using System.Linq;
 using UpgradingLegacyApplication.Api.Models;
 
-namespace UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder
+namespace UpgradingLegacyApplication.Api.Domain.Services
 {
-    public class LegacyHardCodedCompanyLoader
+    public static class LegacyHardCodedCompanyLoader
     {
         public static IEnumerable<CompanyModel> LoadCompanies()
         {
