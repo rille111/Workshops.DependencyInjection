@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using UpgradingLegacyApplication.Api.Controllers;
 
@@ -17,8 +18,8 @@ namespace UpgradingLegacyApplication.Tests.Controllers
             var result = controller.GetAllCustomers();
 
             // Assert
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Any());
+            result.Should().NotBeNull("because we expect at least some results");
+            result.Should().NotBeEmpty("because we want at least 1 company");
         }
 
     }

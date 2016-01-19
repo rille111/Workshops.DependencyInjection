@@ -1,9 +1,10 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
+using UpgradingLegacyApplication.Api.Models;
 using UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder;
 
 namespace UpgradingLegacyApplication.Tests.Smoke
@@ -12,11 +13,11 @@ namespace UpgradingLegacyApplication.Tests.Smoke
     public class CompaniesJsonFileTests
     {
         [TestMethod]
-        public void EmbeddedResourceFile_Should_Exist()
+        public void EmbeddedResourceFile_Should_HaveContent()
         {
             // Arrange
             const string resourceKey = LegacyJsonCompanyLoader.SpecialDaysResourceName;
-            var streamLength = (long?) 0;
+            var streamLength = (long?)0;
 
             // Act
             using (var stream = Assembly.GetAssembly(typeof(LegacyJsonCompanyLoader)).GetManifestResourceStream(resourceKey))
@@ -28,32 +29,31 @@ namespace UpgradingLegacyApplication.Tests.Smoke
             }
 
             // Assert
-            Assert.IsTrue(streamLength.HasValue);
+            streamLength.Should().BeGreaterThan(0, "because the resource file should not be empty.");
         }
 
         [TestMethod]
-        public void EmbeddedResourceFile_Should_HaveContent()
+        public void EmbeddedResourceFile_Should_DeSerializeTo_Models()
         {
             // Arrange
-            var resourceKey = LegacyJsonCompanyLoader.SpecialDaysResourceName;
-            var streamLength = (long?)0;
+            const string resourceKey = LegacyJsonCompanyLoader.SpecialDaysResourceName;
             var json = string.Empty;
 
             // Act
             using (var stream = Assembly.GetAssembly(typeof(LegacyJsonCompanyLoader)).GetManifestResourceStream(resourceKey))
             {
-                streamLength = stream.Length;
-                Debug.Assert(stream != null, "stream != null");
-                using (var reader = new StreamReader(stream))
+                if (stream != null)
                 {
-                    json = reader.ReadToEnd();
+                    using (var reader = new StreamReader(stream))
+                    {
+                        json = reader.ReadToEnd();
+                    }
                 }
             }
+            var models = JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);
 
-            //return JsonConvert.DeserializeObject<IList<SpecialDay>>(json);
-            
             // Assert
-            Assert.IsTrue(json.Length > 0);
+            models.Should().NotBeEmpty("because some models should have been deserialized!");
         }
     }
 }

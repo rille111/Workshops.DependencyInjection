@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using Newtonsoft.Json;
 using UpgradingLegacyApplication.Api.Models;
 
 namespace UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder
@@ -10,12 +14,24 @@ namespace UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder
 
         public static IEnumerable<CompanyModel> LoadCompanies()
         {
-            throw new NotImplementedException();
+            string json = null;
+
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(SpecialDaysResourceName))
+            {
+                if (stream != null)
+                    using (var reader = new StreamReader(stream))
+                    {
+                        json = reader.ReadToEnd();
+                    }
+            }
+
+            return JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);            
         }
 
         public static CompanyModel LoadCompany(int withId)
         {
-            throw new NotImplementedException();
+            var company = LoadCompanies().SingleOrDefault(p => p.Id == withId);
+            return company;
         }
     }
 }

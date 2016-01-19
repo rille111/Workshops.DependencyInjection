@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Web.Http;
 using UpgradingLegacyApplication.Api.Models;
 using UpgradingLegacyApplication.Api.SomeWeirdLegacyFolder;
@@ -13,8 +12,8 @@ namespace UpgradingLegacyApplication.Api.Controllers
         [Route("api/companies")]
         public List<CompanyModel> GetAllCustomers()
         {
-            var x = Assembly.GetExecutingAssembly().GetManifestResourceNames();
-            return LegacyHardCodedCompanyLoader.LoadCompanies().ToList();
+            var companies = LegacyJsonCompanyLoader.LoadCompanies().ToList();
+            return companies;
         }
 
         // GET api/customers/5
@@ -22,7 +21,8 @@ namespace UpgradingLegacyApplication.Api.Controllers
         [Route("api/companies/{id:int}")]
         public CompanyModel GetById(int id)
         {
-            return LegacyHardCodedCompanyLoader.LoadCompany(id);
+            var company = LegacyJsonCompanyLoader.LoadCompany(id);
+            return company;
         }
     }
 }
