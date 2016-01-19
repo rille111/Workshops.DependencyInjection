@@ -81,16 +81,17 @@
   <ItemGroup />
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Models\CustomerModel.cs" />
-    <Compile Include="SomeWeirdLegacyFolder\YeOldeCustomersLoader.cs" />
+    <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Models\CompanyModel.cs" />
+    <Compile Include="SomeWeirdLegacyFolder\LegacyJsonCompanyLoader.cs" />
+    <Compile Include="SomeWeirdLegacyFolder\LegacyHardCodedCompanyLoader.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Customers.json" />
+    <EmbeddedResource Include="Resources\Companies.json" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
