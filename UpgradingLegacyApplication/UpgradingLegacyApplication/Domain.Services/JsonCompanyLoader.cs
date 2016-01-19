@@ -7,21 +7,25 @@ using UpgradingLegacyApplication.Api.Models;
 
 namespace UpgradingLegacyApplication.Api.Domain.Services
 {
-    public static class LegacyJsonCompanyLoader
+    public static class JsonCompanyLoader
     {
-        public const string SpecialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
+        private const string SpecialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
 
         public static IEnumerable<CompanyModel> LoadCompanies()
         {
-            string json = null;
+            string json;
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(SpecialDaysResourceName))
+            using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(SpecialDaysResourceName))
             {
                 if (stream != null)
                     using (var reader = new StreamReader(stream))
                     {
                         json = reader.ReadToEnd();
                     }
+                else
+                {
+                    throw new FileNotFoundException("Companies.json didnt exist or was empty!");
+                }
             }
 
             return JsonConvert.DeserializeObject<IEnumerable<CompanyModel>>(json);

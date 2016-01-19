@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain.Services\CompanyLoadersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\CompaniesControllerTests.cs" />
     <Compile Include="Etc\CompaniesJsonFileTests.cs" />

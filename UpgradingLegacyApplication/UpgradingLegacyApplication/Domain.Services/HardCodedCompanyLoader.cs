@@ -4,7 +4,7 @@ using UpgradingLegacyApplication.Api.Models;
 
 namespace UpgradingLegacyApplication.Api.Domain.Services
 {
-    public static class LegacyHardCodedCompanyLoader
+    public static class HardCodedCompanyLoader
     {
         public static IEnumerable<CompanyModel> LoadCompanies()
         {

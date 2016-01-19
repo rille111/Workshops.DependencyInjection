@@ -12,7 +12,7 @@ namespace UpgradingLegacyApplication.Api.Controllers
         [Route("api/companies")]
         public List<CompanyModel> GetAllCustomers()
         {
-            var companies = LegacyJsonCompanyLoader.LoadCompanies().ToList();
+            var companies = JsonCompanyLoader.LoadCompanies().ToList();
             return companies;
         }
 
@@ -21,7 +21,7 @@ namespace UpgradingLegacyApplication.Api.Controllers
         [Route("api/companies/{id:int}")]
         public CompanyModel GetById(int id)
         {
-            var company = LegacyJsonCompanyLoader.LoadCompany(id);
+            var company = JsonCompanyLoader.LoadCompany(id);
             return company;
         }
     }

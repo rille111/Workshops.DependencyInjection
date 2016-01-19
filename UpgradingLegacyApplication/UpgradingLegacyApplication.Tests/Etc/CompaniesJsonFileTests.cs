@@ -16,11 +16,11 @@ namespace UpgradingLegacyApplication.Tests.Etc
         public void EmbeddedResourceFile_Should_HaveContent()
         {
             // Arrange
-            const string resourceKey = LegacyJsonCompanyLoader.SpecialDaysResourceName;
+            const string resourceKey = "UpgradingLegacyApplication.Api.Resources.Companies.json";
             var streamLength = (long?)0;
 
             // Act
-            using (var stream = Assembly.GetAssembly(typeof(LegacyJsonCompanyLoader)).GetManifestResourceStream(resourceKey))
+            using (var stream = Assembly.GetAssembly(typeof(JsonCompanyLoader)).GetManifestResourceStream(resourceKey))
             {
                 if (stream != null)
                 {
@@ -36,11 +36,11 @@ namespace UpgradingLegacyApplication.Tests.Etc
         public void EmbeddedResourceFile_Should_DeSerializeTo_Models()
         {
             // Arrange
-            const string resourceKey = LegacyJsonCompanyLoader.SpecialDaysResourceName;
+            const string resourceKey = "UpgradingLegacyApplication.Api.Resources.Companies.json";
             var json = string.Empty;
 
             // Act
-            using (var stream = Assembly.GetAssembly(typeof(LegacyJsonCompanyLoader)).GetManifestResourceStream(resourceKey))
+            using (var stream = Assembly.GetAssembly(typeof(JsonCompanyLoader)).GetManifestResourceStream(resourceKey))
             {
                 if (stream != null)
                 {

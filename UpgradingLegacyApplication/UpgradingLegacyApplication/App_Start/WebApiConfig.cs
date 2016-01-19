@@ -4,18 +4,13 @@ namespace UpgradingLegacyApplication.Api
 {
     public static class WebApiConfig
     {
+        /// <summary>
+        /// Register Web API configuration and services
+        /// </summary>
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
-
             // Web API routes
             config.MapHttpAttributeRoutes();
-
-            //config.Routes.MapHttpRoute(
-            //            name: "DefaultApi",
-            //            routeTemplate: "bla/{controller}/{id}",
-            //            defaults: new { id = RouteParameter.Optional }
-            //        );
         }
     }
 }
