@@ -1,0 +1,22 @@
+﻿[
+    {
+        "Id": 1,
+        "Name": "Adlibris",
+        "Url":  "http://www.adlibris.com"
+    },
+    {
+        "Id": 2,
+        "Name": "Bamba",
+        "Url":  "http://www.bamba.se"
+    },
+    {
+        "Id": 3,
+        "Name": "Discshop",
+        "Url":  "http://www.discshop.com"
+    },
+    {
+        "Id": 4,
+        "Name": "Kökets Favoriter",
+        "Url":  "http://www.koket.com"
+    }
+]
