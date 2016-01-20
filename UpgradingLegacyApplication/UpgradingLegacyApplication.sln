@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpgradingLegacyApplication.Api", "UpgradingLegacyApplication\UpgradingLegacyApplication.Api.csproj", "{B213EC16-C441-41F8-AC38-7D0D751837C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpgradingLegacyApplication.Api", "UpgradingLegacyApplication.Api\UpgradingLegacyApplication.Api.csproj", "{B213EC16-C441-41F8-AC38-7D0D751837C4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpgradingLegacyApplication.Tests", "UpgradingLegacyApplication.Tests\UpgradingLegacyApplication.Tests.csproj", "{A4ED7AD4-D0B8-4571-9B02-173071963A38}"
 EndProject

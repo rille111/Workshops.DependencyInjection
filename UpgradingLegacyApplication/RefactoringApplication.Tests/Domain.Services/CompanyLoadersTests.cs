@@ -6,7 +6,7 @@ namespace UpgradingLegacyApplication.Tests.Domain.Services
     [TestClass]
     public class CompanyLoadersTests
     {
-        [TestMethod, Ignore] // Fails because of hardcoded dependency inside the loader that we cannot affect from the outside
+        [TestMethod]
         public void LegacyJsonCompanyLoader_Should_Load_Companies()
         {
             // Arrange
