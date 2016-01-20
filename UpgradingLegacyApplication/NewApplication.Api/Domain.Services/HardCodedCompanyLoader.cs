@@ -1,18 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NewApplication.Api.Infrastructure;
-using NewApplication.Api.Models;
+using RefactoringApplication.Api.Infrastructure;
+using RefactoringApplication.Api.Models;
 // ReSharper disable InconsistentNaming
 
-namespace NewApplication.Api.Domain.Services
+namespace RefactoringApplication.Api.Domain.Services
 {
-    public static class HardCodedCompanyLoader
+    public class HardCodedCompanyLoader : ICompanyLoader
     {
-        private static readonly ConsoleLogger _logger = new ConsoleLogger();
+        private readonly ICustomLogger _logger;
 
-        public static IEnumerable<CompanyModel> LoadCompanies()
+        public HardCodedCompanyLoader(ICustomLogger logger)
         {
-            _logger.Log("LoadCompanies() Was called! From what loader? No idea!");
+            _logger = logger;
+        }
+
+        public IEnumerable<CompanyModel> LoadCompanies()
+        {
             return new List<CompanyModel>
             {
                 new CompanyModel() {Id = 1, Name = "Adlibris", Url = "www.adlibris.se"}
@@ -22,9 +26,8 @@ namespace NewApplication.Api.Domain.Services
             };
         }
 
-        public static CompanyModel LoadCompany(int withId)
+        public CompanyModel LoadCompany(int withId)
         {
-            _logger.Log(string.Format("LoadCompany({0}) Was called! From what loader? No idea!", withId));
             return LoadCompanies().Single(p => p.Id == withId);
         }
     }

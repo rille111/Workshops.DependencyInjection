@@ -3,11 +3,11 @@ using System.IO;
 using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NewApplication.Api.Domain.Services;
-using NewApplication.Api.Models;
 using Newtonsoft.Json;
+using RefactoringApplication.Api.Domain.Services;
+using RefactoringApplication.Api.Models;
 
-namespace NewApplication.Tests.Etc
+namespace RefactoringApplication.Tests.Etc
 {
     [TestClass]
     public class CompaniesJsonFileTests
@@ -16,7 +16,7 @@ namespace NewApplication.Tests.Etc
         public void EmbeddedResourceFile_Should_HaveContent()
         {
             // Arrange
-            const string resourceKey = "NewApplication.Api.Resources.Companies.json";
+            const string resourceKey = "RefactoringApplication.Api.Resources.Companies.json";
             var streamLength = (long?)0;
 
             // Act
@@ -36,7 +36,7 @@ namespace NewApplication.Tests.Etc
         public void EmbeddedResourceFile_Should_DeSerializeTo_Models()
         {
             // Arrange
-            const string resourceKey = "NewApplication.Api.Resources.Companies.json";
+            const string resourceKey = "RefactoringApplication.Api.Resources.Companies.json";
             var json = string.Empty;
 
             // Act

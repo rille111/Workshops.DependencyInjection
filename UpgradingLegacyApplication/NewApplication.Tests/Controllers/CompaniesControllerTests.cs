@@ -1,8 +1,12 @@
-﻿using FluentAssertions;
+﻿using System.Collections.Generic;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NewApplication.Api.Controllers;
+using Moq;
+using RefactoringApplication.Api.Controllers;
+using RefactoringApplication.Api.Domain.Services;
+using RefactoringApplication.Api.Models;
 
-namespace NewApplication.Tests.Controllers
+namespace RefactoringApplication.Tests.Controllers
 {
     [TestClass]
     public class CompaniesControllerTests
@@ -11,14 +15,25 @@ namespace NewApplication.Tests.Controllers
         public void Get()
         {
             // Arrange
-            var controller = new CompanyController();
+            var loader = new Mock<ICompanyLoader>();
+            loader
+                .Setup(p => p.LoadCompanies())
+                .Returns(new List<CompanyModel>());
+            loader
+                .Setup(p => p.LoadCompany(1))
+                .Returns(new CompanyModel() {Id = 1, Name = "TEZT"});
+
+            var controller = new CompanyController(loader.Object);
 
             // Act
-            var result = controller.GetAll();
+            var allCompanies = controller.GetAll();
+            var oneCompany = controller.GetById(1);
 
             // Assert
-            result.Should().NotBeNull("because we expect at least some results");
-            result.Should().NotBeEmpty("because we want at least 1 company");
+            allCompanies.Should().NotBeNull("because we expect at least some results");
+            oneCompany.Should().NotBeNull("because we want at least 1 company");
+            oneCompany.Name.Should().Be("TEZT");
+            loader.Verify();
         }
 
     }

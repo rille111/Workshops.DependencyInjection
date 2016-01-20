@@ -1,6 +1,11 @@
-﻿namespace NewApplication.Api.Infrastructure
+﻿namespace RefactoringApplication.Api.Infrastructure
 {
-    public class ConsoleLogger
+    public interface ICustomLogger
+    {
+        void Log(string input);
+    }
+
+    public class ConsoleLogger : ICustomLogger
     {
         public void Log(string input)
         {

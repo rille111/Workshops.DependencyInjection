@@ -1,23 +1,26 @@
-﻿// ReSharper disable InconsistentNaming
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using NewApplication.Api.Infrastructure;
-using NewApplication.Api.Models;
 using Newtonsoft.Json;
+using RefactoringApplication.Api.Infrastructure;
+using RefactoringApplication.Api.Models;
+// ReSharper disable InconsistentNaming
 
-
-namespace NewApplication.Api.Domain.Services
+namespace RefactoringApplication.Api.Domain.Services
 {
-    public static class JsonCompanyLoader
+    public class JsonCompanyLoader : ICompanyLoader
     {
-        private const string _specialDaysResourceName = "NewApplication.Api.Resources.Companies.json";
-        private static readonly ConsoleLogger _logger = new ConsoleLogger();
+        private readonly ICustomLogger _logger;
+        private const string _specialDaysResourceName = "RefactoringApplication.Api.Resources.Companies.json";
 
-        public static IEnumerable<CompanyModel> LoadCompanies()
+        public JsonCompanyLoader(ICustomLogger _logger)
         {
-            _logger.Log("LoadCompanies() Was called! From what loader? No idea!");
+            this._logger = _logger;
+        }
+
+        public IEnumerable<CompanyModel> LoadCompanies()
+        {
             var retrievedJson = string.Empty;
 
             using (var embeddedStream = Assembly.GetCallingAssembly().GetManifestResourceStream(_specialDaysResourceName))
@@ -37,9 +40,8 @@ namespace NewApplication.Api.Domain.Services
             return deserialized;
         }
 
-        public static CompanyModel LoadCompany(int withId)
+        public CompanyModel LoadCompany(int withId)
         {
-            _logger.Log(string.Format("LoadCompany({0}) Was called! From what loader? No idea!", withId));
             var company = LoadCompanies().SingleOrDefault(p => p.Id == withId);
             return company;
         }

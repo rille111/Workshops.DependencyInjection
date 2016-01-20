@@ -1,11 +1,11 @@
 ﻿// ReSharper disable CheckNamespace
-namespace NewApplication.Api.Infrastructure
+namespace RefactoringApplication.Api.Infrastructure
 {
     public class CurrentConfiguration
     {
         public static bool LoadFromJson
         {
-            get { return true; }
+            get { return false; }
         }
     }
 }

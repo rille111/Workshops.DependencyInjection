@@ -1,12 +1,13 @@
 ﻿using System.Linq;
 using System.Web.Http;
 
-namespace NewApplication.Api
+namespace RefactoringApplication.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
         {
+            SimpleInjectorConfig.ConfigureContainer();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RemoveXmlFormatter(GlobalConfiguration.Configuration);
         }
