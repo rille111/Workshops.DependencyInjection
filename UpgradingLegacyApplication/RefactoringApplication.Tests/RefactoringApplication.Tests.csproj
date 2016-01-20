@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A4ED7AD4-D0B8-4571-9B02-173071963A38}</ProjectGuid>
+    <ProjectGuid>{1D341755-867B-402E-8A68-D6F98EDC4365}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RefactoringApplication.Tests</RootNamespace>
@@ -112,8 +112,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RefactoringApplication\RefactoringApplication.Api.csproj">
-      <Project>{B213EC16-C441-41F8-AC38-7D0D751837C4}</Project>
+    <ProjectReference Include="..\RefactoringApplication.Api\RefactoringApplication.Api.csproj">
+      <Project>{e68042dd-0b32-468d-ab79-beb9668de114}</Project>
       <Name>RefactoringApplication.Api</Name>
     </ProjectReference>
   </ItemGroup>

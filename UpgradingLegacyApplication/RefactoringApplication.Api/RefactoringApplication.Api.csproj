@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B213EC16-C441-41F8-AC38-7D0D751837C4}</ProjectGuid>
+    <ProjectGuid>{E68042DD-0B32-468D-AB79-BEB9668DE114}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UpgradingLegacyApplication.Api</RootNamespace>
-    <AssemblyName>UpgradingLegacyApplication.Api</AssemblyName>
+    <RootNamespace>RefactoringApplication.Api</RootNamespace>
+    <AssemblyName>RefactoringApplication.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>

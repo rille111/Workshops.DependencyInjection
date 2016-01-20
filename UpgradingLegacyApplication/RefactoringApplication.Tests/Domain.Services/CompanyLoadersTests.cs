@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UpgradingLegacyApplication.Api.Domain.Services;
+using RefactoringApplication.Api.Domain.Services;
 
-namespace UpgradingLegacyApplication.Tests.Domain.Services
+namespace RefactoringApplication.Tests.Domain.Services
 {
     [TestClass]
     public class CompanyLoadersTests

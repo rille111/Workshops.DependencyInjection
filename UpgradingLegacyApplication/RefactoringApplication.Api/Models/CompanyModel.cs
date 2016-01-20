@@ -1,4 +1,4 @@
-﻿namespace UpgradingLegacyApplication.Api.Models
+﻿namespace RefactoringApplication.Api.Models
 {
     public class CompanyModel
     {

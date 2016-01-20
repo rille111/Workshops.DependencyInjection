@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace UpgradingLegacyApplication.Api
+namespace RefactoringApplication.Api
 {
     public static class WebApiConfig
     {

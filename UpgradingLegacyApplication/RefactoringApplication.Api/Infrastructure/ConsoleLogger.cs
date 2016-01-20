@@ -1,4 +1,4 @@
-﻿namespace UpgradingLegacyApplication.Api.Infrastructure
+﻿namespace RefactoringApplication.Api.Infrastructure
 {
     public class ConsoleLogger
     {

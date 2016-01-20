@@ -4,10 +4,10 @@ using System.Reflection;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
-using UpgradingLegacyApplication.Api.Domain.Services;
-using UpgradingLegacyApplication.Api.Models;
+using RefactoringApplication.Api.Domain.Services;
+using RefactoringApplication.Api.Models;
 
-namespace UpgradingLegacyApplication.Tests.Etc
+namespace RefactoringApplication.Tests.Etc
 {
     [TestClass]
     public class CompaniesJsonFileTests

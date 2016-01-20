@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using UpgradingLegacyApplication.Api.Domain.Services;
-using UpgradingLegacyApplication.Api.Infrastructure;
-using UpgradingLegacyApplication.Api.Models;
+using RefactoringApplication.Api.Domain.Services;
+using RefactoringApplication.Api.Infrastructure;
+using RefactoringApplication.Api.Models;
 
-namespace UpgradingLegacyApplication.Api.Controllers
+namespace RefactoringApplication.Api.Controllers
 {
     public class CompanyController : ApiController
     {

@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UpgradingLegacyApplication.Api.Controllers;
+using RefactoringApplication.Api.Controllers;
 
-namespace UpgradingLegacyApplication.Tests.Controllers
+namespace RefactoringApplication.Tests.Controllers
 {
     [TestClass]
     public class CompaniesControllerTests

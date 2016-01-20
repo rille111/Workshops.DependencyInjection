@@ -1,17 +1,17 @@
-﻿using UpgradingLegacyApplication.Api.Infrastructure;
-// ReSharper disable InconsistentNaming
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using Newtonsoft.Json;
-using UpgradingLegacyApplication.Api.Models;
+using RefactoringApplication.Api.Infrastructure;
+using RefactoringApplication.Api.Models;
+// ReSharper disable InconsistentNaming
 
-namespace UpgradingLegacyApplication.Api.Domain.Services
+namespace RefactoringApplication.Api.Domain.Services
 {
     public static class JsonCompanyLoader
     {
-        private const string _specialDaysResourceName = "UpgradingLegacyApplication.Api.Resources.Companies.json";
+        private const string _specialDaysResourceName = "RefactoringApplication.Api.Resources.Companies.json";
         private static readonly ConsoleLogger _logger = new ConsoleLogger();
 
         public static IEnumerable<CompanyModel> LoadCompanies()

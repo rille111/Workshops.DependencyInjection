@@ -1,10 +1,10 @@
-﻿using UpgradingLegacyApplication.Api.Infrastructure;
-// ReSharper disable InconsistentNaming
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using UpgradingLegacyApplication.Api.Models;
+using RefactoringApplication.Api.Infrastructure;
+using RefactoringApplication.Api.Models;
+// ReSharper disable InconsistentNaming
 
-namespace UpgradingLegacyApplication.Api.Domain.Services
+namespace RefactoringApplication.Api.Domain.Services
 {
     public static class HardCodedCompanyLoader
     {

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Http;
 
-namespace UpgradingLegacyApplication.Api
+namespace RefactoringApplication.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

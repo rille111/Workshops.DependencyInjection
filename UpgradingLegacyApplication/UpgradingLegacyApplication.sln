@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewApplication.Api", "NewAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewApplication.Tests", "NewApplication.Tests\NewApplication.Tests.csproj", "{B6379A4E-0C5A-45B2-A3DA-4568E448F9AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringApplication.Api", "RefactoringApplication.Api\RefactoringApplication.Api.csproj", "{E68042DD-0B32-468D-AB79-BEB9668DE114}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactoringApplication.Tests", "RefactoringApplication.Tests\RefactoringApplication.Tests.csproj", "{1D341755-867B-402E-8A68-D6F98EDC4365}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{B6379A4E-0C5A-45B2-A3DA-4568E448F9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6379A4E-0C5A-45B2-A3DA-4568E448F9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6379A4E-0C5A-45B2-A3DA-4568E448F9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E68042DD-0B32-468D-AB79-BEB9668DE114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E68042DD-0B32-468D-AB79-BEB9668DE114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E68042DD-0B32-468D-AB79-BEB9668DE114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E68042DD-0B32-468D-AB79-BEB9668DE114}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D341755-867B-402E-8A68-D6F98EDC4365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D341755-867B-402E-8A68-D6F98EDC4365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D341755-867B-402E-8A68-D6F98EDC4365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D341755-867B-402E-8A68-D6F98EDC4365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +67,7 @@ Global
 		{82B9F5BD-3BAF-4BC2-AB9D-70954A78A2E0} = {170A34BE-11F5-45CC-9984-BB2D6CC65AFD}
 		{26046C29-6751-4083-876A-55A2F420BB6F} = {170A34BE-11F5-45CC-9984-BB2D6CC65AFD}
 		{B6379A4E-0C5A-45B2-A3DA-4568E448F9AC} = {170A34BE-11F5-45CC-9984-BB2D6CC65AFD}
+		{E68042DD-0B32-468D-AB79-BEB9668DE114} = {7AB3D408-8696-4EC9-B2E4-3E558460BFD0}
+		{1D341755-867B-402E-8A68-D6F98EDC4365} = {7AB3D408-8696-4EC9-B2E4-3E558460BFD0}
 	EndGlobalSection
 EndGlobal
