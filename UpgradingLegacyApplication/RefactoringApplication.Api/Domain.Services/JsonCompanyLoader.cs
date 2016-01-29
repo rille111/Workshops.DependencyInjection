@@ -11,7 +11,7 @@ namespace RefactoringApplication.Api.Domain.Services
 {
     public static class JsonCompanyLoader
     {
-        private const string _specialDaysResourceName = "RefactoringApplication.Api.Resources.Companies.json";
+        private const string _specialDaysResourceName = "LEGACYHARDCODEDNAME.Api.Resources.Companies.json";
         private static readonly ConsoleLogger _logger = new ConsoleLogger();
 
         public static IEnumerable<CompanyModel> LoadCompanies()
