@@ -116,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NewApplication.Api\NewApplication.Api.csproj">
-      <Project>{e68042dd-0b32-468d-ab79-beb9668de114}</Project>
+      <Project>{26046c29-6751-4083-876a-55a2f420bb6f}</Project>
       <Name>NewApplication.Api</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,12 +2,13 @@
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using NewApplication.Api.Infrastructure;
+using NewApplication.Api.Models;
 using Newtonsoft.Json;
-using RefactoringApplication.Api.Infrastructure;
-using RefactoringApplication.Api.Models;
+
 // ReSharper disable InconsistentNaming
 
-namespace RefactoringApplication.Api.Domain.Services
+namespace NewApplication.Api.Domain.Services
 {
     public class JsonCompanyLoader : ICompanyLoader
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using RefactoringApplication.Api.Infrastructure;
-using RefactoringApplication.Api.Models;
+using NewApplication.Api.Infrastructure;
+using NewApplication.Api.Models;
 
-namespace RefactoringApplication.Api.Domain.Services
+namespace NewApplication.Api.Domain.Services
 {
     public class CompanyLoaderLoggingDecorator : ICompanyLoader
     {

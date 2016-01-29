@@ -1,7 +1,6 @@
 ﻿using System.Web.Http;
-using System.Web.Http.Dispatcher;
 
-namespace RefactoringApplication.Api
+namespace NewApplication.Api
 {
     public static class WebApiConfig
     {

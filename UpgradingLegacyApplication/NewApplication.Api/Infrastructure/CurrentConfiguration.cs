@@ -1,5 +1,5 @@
 ﻿// ReSharper disable CheckNamespace
-namespace RefactoringApplication.Api.Infrastructure
+namespace NewApplication.Api.Infrastructure
 {
     public class CurrentConfiguration
     {

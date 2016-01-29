@@ -2,11 +2,11 @@
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using RefactoringApplication.Api.Controllers;
-using RefactoringApplication.Api.Domain.Services;
-using RefactoringApplication.Api.Models;
+using NewApplication.Api.Controllers;
+using NewApplication.Api.Domain.Services;
+using NewApplication.Api.Models;
 
-namespace RefactoringApplication.Tests.Controllers
+namespace NewApplication.Tests.Controllers
 {
     [TestClass]
     public class CompaniesControllerTests

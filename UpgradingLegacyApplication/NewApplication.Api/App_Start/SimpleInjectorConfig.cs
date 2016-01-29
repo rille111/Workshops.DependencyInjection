@@ -1,13 +1,16 @@
 ﻿using System.Web.Http;
-using RefactoringApplication.Api.Domain.Services;
-using RefactoringApplication.Api.Infrastructure;
+using NewApplication.Api.Domain.Services;
+using NewApplication.Api.Infrastructure;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 
-namespace RefactoringApplication.Api
+namespace NewApplication.Api
 {
     public static class SimpleInjectorConfig
     {
+        /// <summary>
+        /// Bootstrapping for Simple Injector ..
+        /// </summary>
         public static void ConfigureContainer()
         {
             var container = new Container();
@@ -24,6 +27,9 @@ namespace RefactoringApplication.Api
 
         }
 
+        /// <summary>
+        /// Application-specific registrations for Simple Injector
+        /// </summary>
         private static void PerformRegistrations(Container container)
         {
             container.Register<ICustomLogger, ConsoleLogger>(Lifestyle.Scoped);

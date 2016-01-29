@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using RefactoringApplication.Api.Infrastructure;
-using RefactoringApplication.Api.Models;
+using NewApplication.Api.Infrastructure;
+using NewApplication.Api.Models;
+
 // ReSharper disable InconsistentNaming
 
-namespace RefactoringApplication.Api.Domain.Services
+namespace NewApplication.Api.Domain.Services
 {
     public class HardCodedCompanyLoader : ICompanyLoader
     {

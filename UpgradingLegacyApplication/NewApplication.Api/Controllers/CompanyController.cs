@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using RefactoringApplication.Api.Domain.Services;
-using RefactoringApplication.Api.Models;
+using NewApplication.Api.Domain.Services;
+using NewApplication.Api.Models;
 
-namespace RefactoringApplication.Api.Controllers
+namespace NewApplication.Api.Controllers
 {
     public class CompanyController : ApiController
     {
